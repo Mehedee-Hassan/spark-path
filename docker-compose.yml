@@ -18,6 +18,7 @@ services:
       - '8080:8080'
     volumes:
       - .:/home/app/
+      - ./data:/opt/bitnami/spark/data
   spark-worker:
     image: docker.io/bitnami/spark:3.5
     environment:
@@ -32,3 +33,4 @@ services:
       - SPARK_USER=spark
     volumes:
       - .:/home/app/
+      - ./data:/opt/bitnami/spark/data

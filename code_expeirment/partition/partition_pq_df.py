@@ -29,4 +29,4 @@ df.repartition('dt') \
     .write.mode('overwrite') \
     .partitionBy('dt') \
     .format('parquet') \
-    .save('./data')
+    .save('./data/')
