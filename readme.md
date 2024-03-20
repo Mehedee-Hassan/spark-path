@@ -1,7 +1,10 @@
+## SETUP
 ```commandline
  export PYSPARK_PYTHON=python3
  spark-submit sampling_v1.py
 ```
+
+## RUN EXAMPE CODE
 ```commandline
 # DOCKER COMPOSE
 docker-compose up -d
@@ -9,6 +12,7 @@ docker-compose up -d
 ./run_experiment_codes.sh code_expeirment/dataframe/sampling_v1.py
 ```
 
+## STREAM CODE 
 ```commandline
 # run spark stream
 # add file in data/stream/sampleWaterMarkData
