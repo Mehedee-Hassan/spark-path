@@ -39,7 +39,7 @@ object streamCheckpoint {
       .option("maxFilesPerTrigger", 1) // This will read maximum of 1 files per mini batch. However, it can read less than 2 files.
       .option("header", true)
       .schema(schema)
-      .csv("/mnt/c/Users/mehed/Documents/programming/spark/streamming/test-scala/data/stream/")
+      .csv("data/stream/")
       .withColumn("Name", getFileName)
       )
 
@@ -58,3 +58,5 @@ object streamCheckpoint {
       .awaitTermination()
   }
 }
+
+streamCheckpoint.main()
