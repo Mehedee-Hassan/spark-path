@@ -9,17 +9,17 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 data = [{
-    'dt': '2022-01-01',
-    'id': 1
+    'dt': '2022-01-02',
+    'id': 44
 }, {
-    'dt': '2022-01-01',
-    'id': 2
+    'dt': '2022-01-02',
+    'id': 44
 }, {
-    'dt': '2022-01-01',
-    'id': 3
+    'dt': '2022-04-02',
+    'id': 33
 }, {
-    'dt': '2022-02-01',
-    'id': 1
+    'dt': '2022-04-02',
+    'id': 12
 }]
 
 df = spark.createDataFrame(data)
@@ -29,4 +29,7 @@ df.repartition('dt') \
     .write.mode('overwrite') \
     .partitionBy('dt') \
     .format('parquet') \
-    .save('./data/')
+    .save('./data')
+
+
+

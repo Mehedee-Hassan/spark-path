@@ -5,7 +5,7 @@ version: '2'
 
 services:
   spark:
-    image: docker.io/bitnami/spark:3.5
+    image: docker.io/bitnami/spark:latest
     container_name: spark-master-experiment
     environment:
       - SPARK_MODE=master
@@ -18,9 +18,8 @@ services:
       - '8080:8080'
     volumes:
       - .:/home/app/
-      - ./data:/opt/bitnami/spark/data
   spark-worker:
-    image: docker.io/bitnami/spark:3.5
+    image: docker.io/bitnami/spark:latest
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -33,4 +32,3 @@ services:
       - SPARK_USER=spark
     volumes:
       - .:/home/app/
-      - ./data:/opt/bitnami/spark/data
