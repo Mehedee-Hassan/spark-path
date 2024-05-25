@@ -3,7 +3,10 @@
  export PYSPARK_PYTHON=python3
  spark-submit sampling_v1.py
 ```
-
+```
+mhr@mhr:~$ sdk list java
+mhr@mhr:~$ sdk install java 8.0.412-sem
+```
 ## RUN EXAMPE CODE
 ```commandline
 # DOCKER COMPOSE
